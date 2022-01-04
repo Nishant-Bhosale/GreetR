@@ -3,11 +3,24 @@
 		return new Greetr.init(firstName, lastName, language);
 	};
 
-	Greetr.prototype = {
-		getFullName: function () {
-			console.log(this.firstName);
-		},
+	const supportedLangs = ["en", "es"];
+
+	let greetings = {
+		en: "Hello",
+		es: "Hola",
 	};
+
+	let formalGreetings = {
+		en: "Greetings",
+		es: "Saludos",
+	};
+
+	let logMessages = {
+		en: "Logged In",
+		es: "Inicio sesion",
+	};
+
+	Greetr.prototype = {};
 
 	Greetr.init = function (firstName, lastName, language) {
 		let self = this;
