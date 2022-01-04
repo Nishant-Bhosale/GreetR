@@ -98,6 +98,8 @@
 		self.firstName = firstName || "Your FirstName";
 		self.lastName = lastName || "Your LastName";
 		self.language = language || "en";
+
+		self.validateLang();
 	};
 
 	//Change the reference of Greetr.init() objects prototype to custom prototype

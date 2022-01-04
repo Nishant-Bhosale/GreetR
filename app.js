@@ -1,4 +1,4 @@
-const g = $G("Nishant", "Bhosale", "en");
+const g = $G("Nishant", "Bhosale", "en=e");
 console.log(g);
 
 //Without chaining
@@ -6,5 +6,5 @@ console.log(g);
 // g.log();
 
 //With chaining
-g.setLanguage("es").greet(false).setLanguage("en").log();
-g.changeText("greeting", true);
+// g.setLanguage("es").greet(false).setLanguage("en").log();
+// g.changeText("greeting", true);
