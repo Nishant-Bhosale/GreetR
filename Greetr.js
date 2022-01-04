@@ -45,6 +45,17 @@
 			}
 			return this;
 		},
+		log: function () {
+			if (console) {
+				console.log(logMessages[this.language] + ": " + this.fullName());
+			}
+			return this;
+		},
+		setLanguage: function (lang) {
+			this.language = lang;
+			this.validateLang();
+			return this;
+		},
 	};
 
 	Greetr.init = function (firstName, lastName, language) {

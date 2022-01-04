@@ -1,3 +1,9 @@
 const g = $G("Nishant", "Bhosale", "en");
 console.log(g);
-g.greet(true);
+
+//Without chaining
+// g.greet(true);
+// g.log();
+
+//With chaining
+g.setLanguage("es").greet(false).setLanguage("en").log();
