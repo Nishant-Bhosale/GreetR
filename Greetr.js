@@ -3,7 +3,11 @@
 		return new Greetr.init(firstName, lastName, language);
 	};
 
-	Greetr.prototype = {};
+	Greetr.prototype = {
+		getFullName: function () {
+			console.log(this.firstName);
+		},
+	};
 
 	Greetr.init = function (firstName, lastName, language) {
 		let self = this;
@@ -14,4 +18,7 @@
 	};
 
 	Greetr.init.prototype = Greetr.prototype;
+
+	global.Greetr = Greetr;
+	global.$G = Greetr;
 })(window, jQuery);
