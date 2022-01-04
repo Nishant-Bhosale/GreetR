@@ -20,7 +20,32 @@
 		es: "Inicio sesion",
 	};
 
-	Greetr.prototype = {};
+	Greetr.prototype = {
+		fullName: function () {
+			return this.firstName + " " + this.lastName;
+		},
+		validateLang: function () {
+			if (supportedLangs.indexOf(this.language) === -1) {
+				throw new Error("Please enter one of two languages!");
+			}
+		},
+		greeting: function () {
+			return greetings[this.language] + " " + this.firstName + "!";
+		},
+		formalGreeting: function () {
+			return formalGreetings[this.language] + ", " + this.fullName() + "!";
+		},
+		greet: function (formal) {
+			let msg;
+
+			formal ? (msg = this.formalGreeting()) : (msg = this.greeting());
+
+			if (console) {
+				console.log(msg);
+			}
+			return this;
+		},
+	};
 
 	Greetr.init = function (firstName, lastName, language) {
 		let self = this;
