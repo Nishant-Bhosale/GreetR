@@ -56,6 +56,24 @@
 			this.validateLang();
 			return this;
 		},
+		changeText: function (selector, formal) {
+			if (!$) {
+				throw new Error("jQuery not installed");
+			}
+
+			if (selector != "greeting") {
+				throw new Error("InAppropriate Selector");
+			}
+
+			let msg;
+
+			formal ? (msg = this.formalGreeting()) : (msg = this.greeting());
+
+			document.getElementById(selector).innerText = msg;
+			// $(selector).html(msg);
+
+			return this;
+		},
 	};
 
 	Greetr.init = function (firstName, lastName, language) {

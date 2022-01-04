@@ -7,3 +7,4 @@ console.log(g);
 
 //With chaining
 g.setLanguage("es").greet(false).setLanguage("en").log();
+g.changeText("greeting", true);
